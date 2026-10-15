@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longkongmendang Ward | 17 Mile Tuli, Nagaland</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            50: '#f2f7f4',
+                            100: '#e1ede6',
+                            600: '#2d6a4f',
+                            800: '#1b4332',
+                            900: '#081c15',
+                        },
+                        earth: {
+                            100: '#f5f2eb',
+                            200: '#e8e1d5',
+                            800: '#5c4d3c',
+                        },
+                        gold: {
+                            500: '#d4af37',
+                            600: '#b89320',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(8, 28, 21, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .hero-bg {
+            background: linear-gradient(180deg, rgba(8, 28, 21, 0.65) 0%, rgba(8, 28, 21, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2d6a4f;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased selection:bg-forest-600 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-forest-800/40 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Title -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full bg-emerald-700/80 border border-emerald-400/40 flex items-center justify-center text-emerald-100 group-hover:bg-emerald-600 transition">
+                        <i class="fa-solid font-bold text-lg fa-tree"></i>
+                    </div>
+                    <div>
+                        <span class="block text-lg font-serif font-semibold tracking-wide text-stone-100">Longkongmendang</span>
+                        <span class="block text-xs font-light text-emerald-300/80 uppercase tracking-widest">Ward 17 • Mile Tuli, Nagaland</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-200">
+                    <a href="#about" class="hover:text-emerald-400 transition">About Us</a>
+                    <a href="#amenities" class="hover:text-emerald-400 transition">Colony Directory</a>
+                    <a href="#heritage" class="hover:text-emerald-400 transition">Heritage</a>
+                    <a href="#notices" class="hover:text-emerald-400 transition">Notices & Events</a>
+                    <a href="#gallery" class="hover:text-emerald-400 transition">Gallery</a>
+                    <a href="#contact" class="px-4 py-2 rounded-full bg-emerald-700 hover:bg-emerald-600 text-white transition shadow-sm font-medium">Contact & Bookings</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-stone-300 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-forest-900/95 border-b border-forest-800 px-4 pt-2 pb-6 space-y-3 text-stone-200 text-sm">
+            <a href="#about" class="block py-2 hover:text-emerald-400 border-b border-forest-800/50">About Us</a>
+            <a href="#amenities" class="block py-2 hover:text-emerald-400 border-b border-forest-800/50">Colony Directory</a>
+            <a href="#heritage" class="block py-2 hover:text-emerald-400 border-b border-forest-800/50">Heritage & Old Hospital</a>
+            <a href="#notices" class="block py-2 hover:text-emerald-400 border-b border-forest-800/50">Notices & Events</a>
+            <a href="#gallery" class="block py-2 hover:text-emerald-400 border-b border-forest-800/50">Gallery</a>
+            <a href="#contact" class="block py-2 text-emerald-400 font-semibold">Contact & Bookings</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen hero-bg flex items-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 text-white">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-emerald-900/80 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-medium backdrop-blur-sm">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <span>Tuli Sub-Division • Mokokchung District</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-tight text-stone-100 leading-tight">
+                Nestled in Greenery, <br/>
+                <span class="italic font-normal text-emerald-300">Bound by Community.</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-stone-300 text-base sm:text-lg font-light leading-relaxed">
+                Welcome to <strong class="text-stone-100 font-medium">Longkongmendang Colony</strong> (Ward 17). Home to approximately 500 households, quiet tree-lined backcountry roads, historic heritage, and a warm, close-knit spirit in Tuli.
+            </p>
+
+            <!-- Quick Action Stats / Cards -->
+            <div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="bg-forest-900/60 border border-emerald-500/20 backdrop-blur-md rounded-2xl p-4 text-center">
+                    <span class="block text-2xl sm:text-3xl font-serif font-bold text-emerald-400">~500</span>
+                    <span class="text-xs text-stone-300 uppercase tracking-wider">Households</span>
+                </div>
+                <div class="bg-forest-900/60 border border-emerald-500/20 backdrop-blur-md rounded-2xl p-4 text-center">
+                    <span class="block text-2xl sm:text-3xl font-serif font-bold text-emerald-400">Ward 17</span>
+                    <span class="text-xs text-stone-300 uppercase tracking-wider">Mile Tuli</span>
+                </div>
+                <div class="bg-forest-900/60 border border-emerald-500/20 backdrop-blur-md rounded-2xl p-4 text-center">
+                    <span class="block text-2xl sm:text-3xl font-serif font-bold text-emerald-400">1</span>
+                    <span class="text-xs text-stone-300 uppercase tracking-wider">Community Hall</span>
+                </div>
+                <div class="bg-forest-900/60 border border-emerald-500/20 backdrop-blur-md rounded-2xl p-4 text-center">
+                    <span class="block text-2xl sm:text-3xl font-serif font-bold text-emerald-400">100%</span>
+                    <span class="text-xs text-stone-300 uppercase tracking-wider">Serene Greenery</span>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#amenities" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium transition shadow-lg flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Explore Colony Amenities</span>
+                </a>
+                <a href="#notices" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-stone-800/80 hover:bg-stone-800 text-stone-200 border border-stone-600/40 font-medium transition backdrop-blur-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>Notice Board</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll down indicator -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-stone-400 animate-bounce hidden sm:block">
+            <a href="#about" aria-label="Scroll Down"><i class="fa-solid fa-chevron-down text-lg"></i></a>
+        </div>
+    </section>
+
+    <!-- About / Overview Section -->
+    <section id="about" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-forest-600 font-semibold text-xs tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-forest-600"></span>
+                        <span>Colony Profile & Setting</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
+                        A Tranquil Corner of Tuli surrounded by Evergreen Flora
+                    </h2>
+                    <p class="text-stone-600 leading-relaxed">
+                        Tucked gently into a peaceful corner of Mile Tuli, **Longkongmendang Colony** is defined by its pristine air, tree-canopied backcountry roads, and a strong collective spirit. Home to roughly 500 family households, our ward offers the ideal balance between quiet, rustic Nagaland living and accessible community facilities.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-white border border-stone-200/80 shadow-sm flex items-start space-x-3">
+                            <div class="p-2.5 rounded-lg bg-emerald-50 text-emerald-700">
+                                <i class="fa-solid fa-tree-city text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-stone-900 text-sm">Scenic Surroundings</h3>
+                                <p class="text-xs text-stone-500 mt-1">Lush green canopy and quiet country pathways ideal for evening walks.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white border border-stone-200/80 shadow-sm flex items-start space-x-3">
+                            <div class="p-2.5 rounded-lg bg-emerald-50 text-emerald-700">
+                                <i class="fa-solid fa-users text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-stone-900 text-sm">Vibrant Fellowship</h3>
+                                <p class="text-xs text-stone-500 mt-1">A supportive network of neighbors assisting each other in every season.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Visual Card -->
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="C:\Users\User\Downloads\1.jpeg" alt="Backcountry Greenery in Nagaland" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-forest-900/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                            <span class="text-xs font-light text-emerald-300 uppercase tracking-widest">Backcountry Roads</span>
+                            <h3 class="text-xl font-serif font-semibold">Longkongmendang Neighborhood</h3>
+                            <p class="text-xs text-stone-300 mt-1">Ward 17, 17 Mile Tuli, Nagaland</p>
+                        </div>
+                    </div>
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-6 -right-2 sm:right-6 bg-forest-800 text-white p-4 rounded-2xl shadow-xl flex items-center space-x-3 border border-emerald-500/30">
+                        <i class="fa-solid fa-shield-heart text-2xl text-emerald-400"></i>
+                        <div>
+                            <div class="text-xs text-stone-300 uppercase">Self-Sustaining</div>
+                            <div class="text-sm font-semibold">Local Services & Facilities</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Colony Amenities & Facilities Section -->
+    <section id="amenities" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-forest-600 font-semibold text-xs tracking-widest uppercase">Essential Services</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">Colony Amenities & Businesses</h2>
+                <p class="text-stone-600 mt-3 text-sm sm:text-base">
+                    From essential health needs to daily general stores, woodwork, and community gatherings, our colony is equipped with vital day-to-day facilities.
+                </p>
+
+                <!-- Directory Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8">
+                    <button onclick="filterAmenities('all')" class="amenity-btn active-btn px-4 py-2 rounded-full text-xs font-medium transition bg-forest-800 text-white">All Services</button>
+                    <button onclick="filterAmenities('civic')" class="amenity-btn px-4 py-2 rounded-full text-xs font-medium transition bg-stone-100 text-stone-700 hover:bg-stone-200">Community Spaces</button>
+                    <button onclick="filterAmenities('health')" class="amenity-btn px-4 py-2 rounded-full text-xs font-medium transition bg-stone-100 text-stone-700 hover:bg-stone-200">Healthcare</button>
+                    <button onclick="filterAmenities('shops')" class="amenity-btn px-4 py-2 rounded-full text-xs font-medium transition bg-stone-100 text-stone-700 hover:bg-stone-200">General Stores</button>
+                    <button onclick="filterAmenities('woodwork')" class="amenity-btn px-4 py-2 rounded-full text-xs font-medium transition bg-stone-100 text-stone-700 hover:bg-stone-200">Specialized Woodwork</button>
+                </div>
+            </div>
+
+            <!-- Amenities Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="amenities-container">
+
+                <!-- 1. Community Hall -->
+                <div class="amenity-card civic bg-stone-50 border border-stone-200/80 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="h-48 bg-stone-200 relative">
+                        <img src="C:\Users\User\Downloads\7.jpeg" alt="Community Hall" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-forest-800 text-emerald-300 text-xs px-3 py-1 rounded-full font-medium">Community Space</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-serif font-bold text-stone-900">Longkongmendang Community Hall</h3>
+                            </div>
+                            <p class="text-stone-600 text-xs mt-2 leading-relaxed">
+                                Our premier gathering space for council meetings, fellowship events, cultural functions, and celebrations. Equipped with seating and public address essentials.
+                            </p>
+                        </div>
+                        <div class="border-t border-stone-200/60 pt-4 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-location-dot text-emerald-600 mr-1"></i> Main Colony Center</span>
+                            <a href="#contact" class="text-forest-600 font-semibold hover:underline">Book Hall &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Pharmacy -->
+                <div class="amenity-card health bg-stone-50 border border-stone-200/80 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="h-48 bg-stone-200 relative">
+                        <img src="C:\Users\User\Downloads\3.jpeg" alt="Pharmacy" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-teal-800 text-teal-200 text-xs px-3 py-1 rounded-full font-medium">Healthcare</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-serif font-bold text-stone-900">Colony Pharmacy</h3>
+                            <p class="text-stone-600 text-xs mt-2 leading-relaxed">
+                                Provides essential medicines, first-aid items, basic wellness care, and health advice to households right within the neighborhood.
+                            </p>
+                        </div>
+                        <div class="border-t border-stone-200/60 pt-4 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-clock text-emerald-600 mr-1"></i> 7:00 AM – 8:00 PM</span>
+                            <span class="text-emerald-700 font-medium">Emergency Care</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Local Shops & Variety Stores -->
+                <div class="amenity-card shops bg-stone-50 border border-stone-200/80 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="h-48 bg-stone-200 relative">
+                        <img src="C:\Users\User\Downloads\6.jpeg"alt="Local Variety Store" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-amber-800 text-amber-200 text-xs px-3 py-1 rounded-full font-medium">Provisions</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-serif font-bold text-stone-900">Variety & Provision Stores</h3>
+                            <p class="text-stone-600 text-xs mt-2 leading-relaxed">
+                                Multiple local shops stocking daily groceries, fresh produce, household goods, stationery, and packaged snacks for resident convenience.
+                            </p>
+                        </div>
+                        <div class="border-t border-stone-200/60 pt-4 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-store text-emerald-600 mr-1"></i> Various Locations</span>
+                            <span class="text-stone-600 font-medium">Daily Supplies</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Specialized Woodwork & Coffin Shop -->
+                <div class="amenity-card woodwork bg-stone-50 border border-stone-200/80 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="h-48 bg-stone-200 relative">
+                        <img src="C:\Users\User\Downloads\9.jpg" alt="Woodwork shop" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-earth-800 text-amber-100 text-xs px-3 py-1 rounded-full font-medium">Craft & Services</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-serif font-bold text-stone-900">Woodwork & Funeral Services Shop</h3>
+                            <p class="text-stone-600 text-xs mt-2 leading-relaxed">
+                                Offering respectful, handcrafted woodwork, customized timber fittings, and essential coffin craftsmanship to support families during solemn times.
+                            </p>
+                        </div>
+                        <div class="border-t border-stone-200/60 pt-4 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-hammer text-emerald-600 mr-1"></i> Specialized Craft</span>
+                            <span class="text-earth-800 font-medium">24/7 Priority Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Historic Old Hospital Quarters -->
+                <div class="amenity-card civic bg-stone-50 border border-stone-200/80 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="h-48 bg-stone-200 relative">
+                        <img src="C:\Users\User\Downloads\4.jpeg" alt="Historic Building" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-slate-800 text-slate-200 text-xs px-3 py-1 rounded-full font-medium">Heritage & Housing</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-serif font-bold text-stone-900">Historic Hospital Building</h3>
+                            <p class="text-stone-600 text-xs mt-2 leading-relaxed">
+                                An archaic heritage landmark of the colony. Formerly the primary regional care unit, now preserved and repurposed into affordable residential rental quarters.
+                            </p>
+                        </div>
+                        <div class="border-t border-stone-200/60 pt-4 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-building-columns text-emerald-600 mr-1"></i> Preserved Heritage</span>
+                            <a href="#heritage" class="text-forest-600 font-semibold hover:underline">Read Story &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Spotlight Section -->
+    <section id="heritage" class="py-20 bg-forest-900 text-white relative overflow-hidden">
+        <!-- Background watermark effect -->
+        <div class="absolute -right-20 -bottom-20 text-forest-800/20 text-[200px] font-serif pointer-events-none select-none">
+            17
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="px-3 py-1 rounded-full bg-emerald-800/80 text-emerald-300 text-xs font-semibold uppercase tracking-wider border border-emerald-600/30">
+                        Preserved Legacy
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-100 mt-4 leading-tight">
+                        The Historic Hospital: <br/>
+                        <span class="italic font-normal text-emerald-300">From Healing Center to Living Quarters</span>
+                    </h2>
+                    <p class="text-stone-300 mt-4 text-sm sm:text-base leading-relaxed">
+                        In the earlier decades of Tuli's development, the old hospital building in Longkongmendang served as a vital medical lifeline for residents across Mile Tuli and neighboring settlements. 
+                    </p>
+                    <p class="text-stone-300 mt-3 text-sm leading-relaxed">
+                        Although medical operations transitioned to newer regional health centers over time, the colony council chose to carefully preserve the vintage wooden and brick architecture. Today, rather than lying dormant, the building has been thoughtfully repurposed as residential living quarters for rented accommodation—offering character, history, and home to resident families.
+                    </p>
+
+                    <div class="mt-8 grid grid-cols-2 gap-4 border-t border-forest-800 pt-6">
+                        <div>
+                            <span class="block text-2xl font-serif font-bold text-emerald-400">Architectural Heritage</span>
+                            <span class="text-xs text-stone-400">Vintage Nagaland Era Design</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-serif font-bold text-emerald-400">Residential Rental</span>
+                            <span class="text-xs text-stone-400">Occupied Living Space</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historic Photo Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="rounded-2xl overflow-hidden border border-emerald-500/20 shadow-lg">
+                        <img src="C:\Users\User\Downloads\4.jpeg" alt="Old structure preservation" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-emerald-500/20 shadow-lg mt-6">
+                        <img src="C:\Users\User\Downloads\4.jpeg"alt="Surrounding evergreen woods" class="w-full h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Board Section -->
+    <section id="notices" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-forest-600 font-semibold text-xs tracking-widest uppercase">Colony Updates</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">Resident Notice Board</h2>
+                </div>
+                <p class="text-stone-600 text-sm max-w-md mt-2 md:mt-0">
+                    Stay informed with official colony announcements, sanitation drives, community hall meetings, and neighborhood updates.
+                </p>
+            </div>
+
+            <!-- Notice Cards List -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Notice 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Council Meeting</span>
+                        <span class="text-xs text-stone-400">Oct 18, 2026</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-900 text-lg mb-2">Quarterly Household Gathering</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed mb-4">
+                        All household heads from Ward 17 are invited to discuss road maintenance along the backcountry routes and upcoming festival planning.
+                    </p>
+                    <div class="flex items-center text-xs text-stone-500 font-medium border-t border-stone-100 pt-3">
+                        <i class="fa-solid fa-location-dot text-emerald-600 mr-1.5"></i> Community Hall • 3:00 PM
+                    </div>
+                </div>
+
+                <!-- Notice 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Cleanliness Drive</span>
+                        <span class="text-xs text-stone-400">Oct 24, 2026</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-900 text-lg mb-2">Colony Greenery Preservation</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed mb-4">
+                        Volunteers and youth members will participate in trimming road borders and clearing drainage along tree-lined backcountry paths.
+                    </p>
+                    <div class="flex items-center text-xs text-stone-500 font-medium border-t border-stone-100 pt-3">
+                        <i class="fa-solid fa-leaf text-emerald-600 mr-1.5"></i> Assembly Point: Pharmacy Corner
+                    </div>
+                </div>
+
+                <!-- Notice 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Health Awareness</span>
+                        <span class="text-xs text-stone-400">Nov 02, 2026</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-900 text-lg mb-2">Free Health Checkup Camp</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed mb-4">
+                        Organized in coordination with the local pharmacy. Free blood pressure screening, sugar tests, and general consultation for seniors.
+                    </p>
+                    <div class="flex items-center text-xs text-stone-500 font-medium border-t border-stone-100 pt-3">
+                        <i class="fa-solid fa-heart-pulse text-emerald-600 mr-1.5"></i> Colony Pharmacy Premises
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-forest-600 font-semibold text-xs tracking-widest uppercase">Visual Tour</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">Life in Longkongmendang</h2>
+                <p class="text-stone-600 mt-2 text-sm">Glimpses of our peaceful forest pathways, community structures, and quiet morning mist.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="group relative rounded-2xl overflow-hidden h-64 shadow-md">
+                    <img src="C:\Users\User\Downloads\5.jpeg" alt="Forest path" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4 text-white">
+                        <span class="text-xs font-medium">Tree-lined Backcountry Roads</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden h-64 shadow-md">
+                    <img src="C:\Users\User\Downloads\1.jpeg"Lush foliage" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4 text-white">
+                        <span class="text-xs font-medium">Evergreen Hills of Tuli</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden h-64 shadow-md">
+                    <img src="C:\Users\User\Downloads\7.jpeg" alt="Gathering hall" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4 text-white">
+                        <span class="text-xs font-medium">Community Hall Complex</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden h-64 shadow-md">
+                    <img src="C:\Users\User\Downloads\9.jpg"alt="Craftsmanship" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4 text-white">
+                        <span class="text-xs font-medium">Local Woodworking Artisan Shop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts Directory -->
+    <section class="py-12 bg-emerald-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold text-emerald-100">Emergency & Key Helpline Numbers</h3>
+                    <p class="text-xs text-emerald-300 mt-1">Keep these contacts handy for quick assistance within Ward 17 and Tuli sub-division.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full lg:w-auto">
+                    <a href="tel:0369222000" class="flex items-center space-x-3 bg-emerald-800/80 border border-emerald-600/40 p-3 rounded-xl hover:bg-emerald-700 transition">
+                        <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white text-xs">
+                            <i class="fa-solid fa-prescription-bottle-medical"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold">Colony Pharmacy</span>
+                            <span class="block text-[11px] text-emerald-300">+91 98XXX XXXXX</span>
+                        </div>
+                    </a>
+
+                    <a href="tel:0369222001" class="flex items-center space-x-3 bg-emerald-800/80 border border-emerald-600/40 p-3 rounded-xl hover:bg-emerald-700 transition">
+                        <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white text-xs">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold">Colony Council Secretary</span>
+                            <span class="block text-[11px] text-emerald-300">+91 94XXX XXXXX</span>
+                        </div>
+                    </a>
+
+                    <a href="tel:112" class="flex items-center space-x-3 bg-emerald-800/80 border border-emerald-600/40 p-3 rounded-xl hover:bg-emerald-700 transition">
+                        <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white text-xs">
+                            <i class="fa-solid fa-truck-medical"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold">Tuli Emergency Service</span>
+                            <span class="block text-[11px] text-emerald-300">Dial 112 / Local Hospital</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Inquiry Form -->
+    <section id="contact" class="py-20 bg-stone-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-12 border border-stone-200">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-forest-600 font-semibold text-xs tracking-widest uppercase">Get in Touch</span>
+                    <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2">Community Inquiry & Hall Booking</h2>
+                    <p class="text-stone-600 text-xs sm:text-sm mt-2">
+                        Have a query for the colony council, need information on local shops, or want to reserve the Community Hall for an event? Send a message below.
+                    </p>
+                </div>
+
+                <form id="colony-contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Full Name *</label>
+                            <input type="text" required placeholder="e.g. Temjen Ao" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-forest-600 focus:outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Phone Number / WhatsApp *</label>
+                            <input type="tel" required placeholder="+91 9876543210" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-forest-600 focus:outline-none text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Category</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-forest-600 focus:outline-none text-sm">
+                                <option>Community Hall Reservation</option>
+                                <option>General Information Inquiry</option>
+                                <option>Old Hospital Rental Information</option>
+                                <option>Woodwork & Craft Request</option>
+                                <option>Notice Board Announcement Submission</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Household / Address Detail</label>
+                            <input type="text" placeholder="House No. or Ward detail (if resident)" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-forest-600 focus:outline-none text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Message or Request Details *</label>
+                        <textarea rows="4" required placeholder="Please state your event dates or specific inquiry..." class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-forest-600 focus:outline-none text-sm"></textarea>
+                    </div>
+
+                    <!-- Submission notification box -->
+                    <div id="form-alert" class="hidden p-4 rounded-xl text-sm"></div>
+
+                    <div class="text-center">
+                        <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-full bg-forest-800 hover:bg-forest-900 text-white font-semibold transition shadow-lg flex items-center justify-center space-x-2 mx-auto">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Submit Request</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest-900 text-stone-300 pt-16 pb-8 border-t border-forest-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-forest-800">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-full bg-emerald-700 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+                        <span class="text-xl font-serif font-bold text-stone-100">Longkongmendang Colony</span>
+                    </div>
+                    <p class="text-xs text-stone-400 max-w-sm leading-relaxed">
+                        Ward 17, Mile Tuli, Mokokchung District, Nagaland. A tranquil, self-reliant neighborhood of approx 500 households, rich in community fellowship and greenery.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-white transition">About Ward 17</a></li>
+                        <li><a href="#amenities" class="hover:text-white transition">Colony Pharmacy & Shops</a></li>
+                        <li><a href="#heritage" class="hover:text-white transition">Historic Hospital Building</a></li>
+                        <li><a href="#notices" class="hover:text-white transition">Announcements</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-4">Colony Location</h4>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        17 Mile Tuli Sub-Division<br/>
+                        Mokokchung District, Nagaland<br/>
+                        PIN Code: 798623
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500">
+                <p>&copy; 2026 Longkongmendang Colony Council (Ward 17). All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed for Mile Tuli Community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter Amenities Function
+        function filterAmenities(category) {
+            const cards = document.querySelectorAll('.amenity-card');
+            const buttons = document.querySelectorAll('.amenity-btn');
+
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-forest-800', 'text-white');
+                btn.classList.add('bg-stone-100', 'text-stone-700');
+            });
+            event.target.classList.remove('bg-stone-100', 'text-stone-700');
+            event.target.classList.add('bg-forest-800', 'text-white');
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Contact Form Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            
+            alertBox.className = "p-4 rounded-xl text-sm bg-emerald-100 border border-emerald-300 text-emerald-800 block";
+            alertBox.innerHTML = "<i class='fa-solid fa-circle-check mr-2'></i> Thank you! Your request has been recorded. The Colony Council / facility in-charge will contact you shortly.";
+
+            // Reset form fields
+            document.getElementById('colony-contact-form').reset();
+
+            // Hide alert after 6 seconds
+            setTimeout(() => {
+                alertBox.className = "hidden";
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
